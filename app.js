@@ -18,7 +18,7 @@ app.use(express.urlencoded({
 }))
 
 // ket noi mongoose
-mongoose.connect("mongodb://localhost:27017/CRUD_Shop24h", (error) => {
+mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost:27017/CRUD_Shop24h", (error) => {
     if (error) {
         throw error;
     }
