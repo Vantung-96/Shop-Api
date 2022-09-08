@@ -18,7 +18,7 @@ app.use(express.urlencoded({
 }))
 
 // ket noi mongoose
-mongoose.connect( "mongodb://localhost:27017/CRUD_Shop24h", (error) => {
+mongoose.connect( "mongodb+srv://blackzebi:Tung%40866887@cluster0.tbcyepe.mongodb.net/Shop24h", (error) => {
     if (error) {
         throw error;
     }
@@ -43,6 +43,6 @@ app.use("/", customerRouter);
 app.use("/", orderRouter);
 
 // chay cong heroku
-app.listen( process.env.PORT || port, () => {
-    console.log("app listening on port" + process.env.PORT || port);
+app.listen( port, () => {
+    console.log("app listening on port" +  port);
 })
