@@ -43,6 +43,6 @@ app.use("/", customerRouter);
 app.use("/", orderRouter);
 
 // chay cong heroku
-app.listen( port, () => {
-    console.log("app listening on port" +  port);
+app.listen( process.env.PORT || port, () => {
+    console.log("app listening on port" + process.env.PORT || port);
 })
