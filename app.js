@@ -18,7 +18,7 @@ app.use(express.urlencoded({
 }))
 
 // ket noi mongoose
-mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost:27017/CRUD_Shop24h", (error) => {
+mongoose.connect( "mongodb://localhost:27017/CRUD_Shop24h", (error) => {
     if (error) {
         throw error;
     }
@@ -44,5 +44,5 @@ app.use("/", orderRouter);
 
 // chay cong heroku
 app.listen( process.env.PORT || port, () => {
-    console.log("app listening on port" + port);
+    console.log("app listening on port" + process.env.PORT || port);
 })
