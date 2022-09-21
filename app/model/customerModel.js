@@ -3,9 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const customerModel = new Schema({
-    _id:{
-        type: mongoose.Types.ObjectId
-    },
+    _id:String,
     fullName: {
         type: String,
         required: true
