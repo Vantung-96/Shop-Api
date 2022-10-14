@@ -6,7 +6,7 @@ const customerModel = new Schema({
     _id:String,
     fullName: {
         type: String,
-        required: true
+        
     },
     phone: {
         type: String,
