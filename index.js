@@ -18,6 +18,7 @@ app.use(express.urlencoded({
 }))
 
 // ket noi mongoose
+mongoose.set("strictQuery", false);
 mongoose.connect( "mongodb+srv://blackzebi:Tung%40866887@cluster0.tbcyepe.mongodb.net/Shop24h", (error) => {
     if (error) {
         throw error;
